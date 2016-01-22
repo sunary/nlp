@@ -12,7 +12,7 @@ build = 0
 if os.path.exists(__path('build.info')):
     build = open(__path('build.info')).read().strip()
 
-version = '1.1.0.{}'.format(build)
+version = '1.0.{0}'.format(build)
 
 setup(
     name='nlp',
