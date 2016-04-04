@@ -1,4 +1,4 @@
-pandas
+pandas==0.17.1
 bitarray
 gensim==0.12.1
 six==1.9.0
