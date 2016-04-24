@@ -11,7 +11,7 @@ class SpellingCorrect():
         self.get_dictionary()
 
     def get_dictionary(self):
-        pd_file = pd.read_csv('dict.csv')
+        pd_file = pd.read_csv('../resources/en_dict.csv')
         self.list_words = pd_file['word']
 
     def get_position(self, word):
