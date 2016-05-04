@@ -32,14 +32,10 @@ def remove_accent(text):
 
 
 def dict_search():
-    of = open('../resources/vi_listwords.txt')
-    words = of.read().split('\n')
-    of.close()
-
     words = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 
     len_dict = len(words)
-    index_words = [-1] * 10
+    index_words = [-1] * 2
     index_words[0] = 0
 
     while index_words[0] < len_dict:
@@ -62,6 +58,32 @@ def dict_search():
                     return
 
 
+def dict_search2():
+    words = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+
+    len_dict = len(words)
+
+    for i in range(len_dict):
+        for j in range(len_dict):
+            text_search = words[i] + ' ' + words[j]
+            print text_search
+
+
+def dict_search3():
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    words = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+
+    len_dict = len(words)
+
+    for i in range(len_dict):
+        text_search = words[i]
+        print text_search
+        if search_more(text_search):
+            for c in alphabet:
+                text_search = words[i] + ' ' + c
+                print text_search
+
+
 def last_index(idx):
     for i in reversed(range(len(idx))):
         if idx[i] != -1:
@@ -72,6 +94,5 @@ def search_more(text):
     return random.randrange(0, 5) > 3
 
 
-
 if __name__ == '__main__':
-    dict_search()
+    dict_search3()
